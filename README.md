@@ -8,20 +8,21 @@ TurboWarp extensions.
 
 # Building
 
-To build a Lua extension, use
-[`seec`](https://github.com/ScratchEverywhere/seec):
+To build the Lua extensions, use `bun`:
 
-```bash
-seec -i /path/to/main.lua -m /path/to/meta.json -o /path/to/output.see
+```sh
+bun build.ts
 ```
 
-Alternatively, simply run `seec` in the directory with `main.lua` and
-`meta.json`:
+The compiled extensions can be found in the `bin` folder.
 
-```bash
-cd /path/to/extension
-seec
-```
-
-Then it should be as simple as copying the `.see` file to
+Then it should be as simple as copying the `.see` files to
 `scratch-everywhere/extensions` and running Scratch Everywhere!!
+
+# Using in an Editor
+
+`bun` will also build JavaScript versions of the extensions. These are intended
+for use in a Scratch editor that supports loading custom extensions.
+
+> [!NOTE]
+> These extensions will likely not work correctly in the editor.
